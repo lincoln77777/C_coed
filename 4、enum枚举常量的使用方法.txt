@@ -1,0 +1,17 @@
+#include <stdio.h>
+//枚举常量的使用方法------enum枚举关键字
+int main()
+{
+	enum Color
+	{
+		R=4,
+		G=6,
+		B=10
+	}; //R,G,B的初值可设定，但不可后续更改
+
+	//R = 5;  报错！！！
+
+	printf("%d\r\n",R);
+
+	return 0 ;
+}

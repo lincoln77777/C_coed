@@ -1,0 +1,21 @@
+#include "stdio.h"
+//比较两个数的大小
+int MAX(int x,int y)
+{
+	if (x > y)
+		return  x;
+	else 
+	    return  y;
+}
+
+int main()
+{
+	int a,b,max_num;
+	
+	scanf_s("%d%d",&a,&b);
+	max_num = MAX(a,b);
+
+	printf("%d",max_num);
+
+	return 0;
+}

@@ -1,0 +1,33 @@
+/*输入二维数组行列，利用指针变量输出对应行列数组的值*/
+#include "stdio.h"
+
+int main()
+{
+	int a[3][4] = {0,1,2,3,
+		           4,5,6,7,
+		           8,9,10,11};
+	int (*p)[4], i, j;
+
+	p = a;
+
+	printf("i = ");
+	scanf_s("%d", &i);
+	while (i < 0 || i>2)
+	{
+		printf("i = ");
+		scanf_s("%d", &i);
+	}
+
+	printf("j = ");
+	scanf_s("%d", &j);
+	while (j < 0 || j>3)
+	{
+		printf("j = ");
+		scanf_s("%d", &j);
+	}
+
+	printf("a[%d][%d]=%d\n",i,j,*(*(p+i)+j));
+
+
+	return 0;
+}

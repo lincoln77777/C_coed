@@ -1,0 +1,17 @@
+/*数组指针（四种方法，得到同样结果）*/
+#include "stdio.h"
+
+int main()
+{
+	int a = 2;
+	int array[2][3] = { {1,2,3},{4,5,6} };
+	int(*p)[3]=array;
+
+	printf("%d\n", **(p+1));
+	printf("%d\n", **(array + 1));
+	printf("%d\n", array[1][0]);
+	printf("%d\n", (*(p+1))[0]);
+
+	return 0;
+
+}

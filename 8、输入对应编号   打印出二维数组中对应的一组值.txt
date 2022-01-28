@@ -1,0 +1,40 @@
+/*输入对应编号   打印出二维数组中对应的一组值*/
+#include "stdio.h"
+
+int main()
+{
+	double a[][4] = { {60.0,70.0,85.5,91.5},{56.0,78.0,90.5,79.0},{21.0,32.0,99.5,100.0},{100.0,100.0,100.0,100.0} };
+	double* se(double(*pointer)[4], int n);
+	double* p;
+	int i, m;
+
+	printf("请输入学生的编号：");
+	scanf_s("%d",&m);
+
+	p = se(a, m);
+
+	if(m>=4)
+		printf("没有录入该学生的成绩，请重新输入：");
+
+	else
+	{
+		printf("该学生的成绩分别为:\n", m);
+
+		for (i = 0; i < 4; i++)
+		{
+			printf("%5.2f\t", *(p + i));
+		}
+
+		printf("\n\n\n");
+	}
+
+	return 0;
+}
+
+double* se(double(*pointer)[4], int n)
+{
+	double* pt;
+
+	pt = *(pointer + n);
+		return pt;
+}

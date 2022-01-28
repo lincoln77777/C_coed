@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <Windows.h>
+
+int main()
+{
+	char str1[] = "welcome to bit!!!";//17个字
+	char str2[] = "#################";//15
+	char left = 0;
+	char right = strlen(str2) - 1;
+
+	while(left <= right)
+	{
+	   Sleep(10);//1000毫秒
+	   printf("%s\n", str2);
+	   str2[left] = str1[left];
+	   str2[right] = str1[right];
+	   left++; right--;
+	}
+
+	return 0;
+}

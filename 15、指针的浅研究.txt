@@ -1,0 +1,23 @@
+/*指针的浅研究*/
+#include "stdio.h"
+
+void test(int* p)
+{
+	*p = 456;
+}
+
+int main()
+{
+	int* p = NULL;
+	int a = 123;
+
+	p = &a;
+
+	printf("*p=%d	 p=%d	 &p=%d	  &(*p)=%d	  \n a=%d	 &a=%d\n\n", *p,p,&p, &(*p),a,&a);
+	test(p);
+	printf("*p=%d	 p=%d	 &p=%d	  &(*p)=%d	  \n a=%d	 &a=%d\n\n", *p, p, &p, &(*p), a, &a);
+
+	getchar();
+	
+	return 0;
+}

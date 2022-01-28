@@ -1,0 +1,25 @@
+#include "stdio.h"
+//输入一个i，判断1～i之间的奇数偶数数量
+int even=0,odd=0;//奇数偶数变量
+
+int i;//输入
+
+int main()
+{
+	scanf_s("%d", &i);
+
+	if (i % 2 == 0)
+	{
+		odd = i / 2;
+		even = odd;
+	}	
+	else
+	{
+		odd = i / 2;
+		even = odd + 1;
+	}
+
+	printf("奇数为：%d 个", odd);
+	printf("偶数为：%d 个", even);
+	return 0;
+}

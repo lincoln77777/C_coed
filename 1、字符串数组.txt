@@ -1,0 +1,11 @@
+/*字符串数组*/
+#include "stdio.h"
+
+int main()
+{
+	char sing[] = "I love China !!!";
+
+	printf("%s\n",sing);
+
+	return 0;
+}

@@ -1,0 +1,15 @@
+#include <stdio.h>
+//#include <string.h>  //编译器vs2022为什么加了这个头文件报错，不加反而不报错?谜
+
+#pragma warning(disable:4996) // 解决strcpy不安全问题
+
+int main()
+{
+	char sing[20] = "ABCDE";
+
+	printf("%s\n", sing);
+	strcpy(sing, "12345");//strcpy函数可修改字符串数组内容
+	printf("%s\n", sing);
+
+	return 0;
+}
